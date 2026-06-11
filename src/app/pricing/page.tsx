@@ -8,6 +8,7 @@ const plans = [
     vehicles: "Up to 30 vehicles",
     staff: "1 owner account only",
     monthly: 0,
+    introMonthly: 0,
     tagline: "Try MotoManager free for 1 week",
     isTrial: true,
     features: [
