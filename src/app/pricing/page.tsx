@@ -4,63 +4,61 @@ import Link from "next/link";
 // Annual price = monthly x 10 (≈17% off, "2 months free").
 const plans = [
   {
-    name: "Starter",
-    vehicles: "Up to 10 vehicles",
-    staff: "1 staff login (owner only)",
-    monthly: 299,
+    name: "Tier 1",
+    vehicles: "Up to 15 vehicles",
+    staff: "1 owner + 1 staff account",
+    monthly: 199,
     tagline: "For small shops just getting started",
     features: [
-      "Unlimited rentals & PDF receipts",
-      "Customer ID & licence capture + signature",
-      "DPDP-compliant consent & storage",
+      "Rental form & customer management",
+      "ID, licence & digital signature capture",
+      "Auto-generated PDF receipts",
+      "Edit & extend rentals",
+      "Fleet management",
+      "QR codes for Google Reviews & UPI",
+      "DPDP-compliant consent & secure storage",
     ],
-    cta: "Start Starter",
+    cta: "Start Tier 1",
   },
   {
-    name: "Standard",
-    vehicles: "Up to 20 vehicles",
-    staff: "Up to 3 staff logins",
-    monthly: 599,
-    tagline: "For shops adding their first staff",
+    name: "Tier 2",
+    vehicles: "Up to 30 vehicles",
+    staff: "1 owner + 2 staff accounts",
+    monthly: 399,
+    tagline: "For shops adding agents & tracking expenses",
     features: [
-      "Everything in Starter, plus:",
-      "Custom shop logo & branding on receipts",
-      "Customer blacklist management",
-      "Vehicle expense tracking",
+      "Everything in Tier 1, plus:",
+      "Finance & expense tracking",
+      "Vehicle maintenance tracking",
+      "Agent management",
     ],
-    cta: "Start Standard",
+    cta: "Start Tier 2",
   },
   {
-    name: "Growth",
-    vehicles: "Up to 50 vehicles",
-    staff: "Up to 5 staff logins",
-    monthly: 999,
-    tagline: "For the typical multi-staff fleet",
+    name: "Tier 3",
+    vehicles: "Up to 60 vehicles",
+    staff: "1 owner + 3 staff accounts",
+    monthly: 799,
+    tagline: "For established multi-staff fleets",
     highlighted: true,
     features: [
-      "Everything in Standard, plus:",
-      "Agent management",
-      "QR codes for Google Reviews & UPI",
+      "Everything in Tier 2, plus:",
+      "Customer blacklist management",
+      "Excel report generation",
     ],
-    cta: "Start Growth",
+    cta: "Start Tier 3",
   },
   {
-    name: "Fleet",
-    vehicles: "Up to 100 vehicles",
-    staff: "Up to 10 staff logins",
-    monthly: 1799,
-    tagline: "For larger multi-location fleets",
-    features: ["Everything in Growth, plus:", "Priority support"],
-    cta: "Start Fleet",
-  },
-  {
-    name: "Enterprise",
-    vehicles: "101–150 vehicles",
-    staff: "Unlimited staff logins",
-    monthly: 2499,
-    tagline: "For your biggest operations",
-    features: ["Everything in Fleet, plus:", "Unlimited staff logins"],
-    cta: "Start Enterprise",
+    name: "Tier 4",
+    vehicles: "Up to 200 vehicles",
+    staff: "1 owner + 5 staff accounts",
+    monthly: 1499,
+    tagline: "For your largest, multi-location operations",
+    features: [
+      "Everything in Tier 3",
+      "Higher vehicle & staff limits",
+    ],
+    cta: "Start Tier 4",
   },
 ];
 
@@ -82,9 +80,12 @@ export default function PricingPage() {
         <p className="mt-1 text-xs text-amber-600">
           Pricing shown below is placeholder — final amounts to be confirmed.
         </p>
+        <div className="mt-4 inline-block rounded-full bg-brand-100 px-4 py-1.5 text-sm font-semibold text-brand-700">
+          🎉 Start with a free 1-week trial — no card required
+        </div>
       </div>
 
-      <div className="mt-12 -mx-4 flex gap-6 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-5 lg:gap-4 lg:overflow-visible">
+      <div className="mt-12 -mx-4 flex gap-6 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-4 lg:gap-4 lg:overflow-visible">
         {plans.map((plan) => {
           const annual = plan.monthly * 10; // 2 months free
           return (
