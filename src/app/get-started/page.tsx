@@ -53,19 +53,6 @@ export default function GetStartedPage() {
           className="flex w-full items-center justify-center gap-2 rounded-xl bg-gray-900 px-5 py-3 text-white shadow-sm transition hover:bg-gray-800 sm:w-auto"
         >
           <span className="text-left">
-            <span className="block text-[10px] leading-none">
-              Download on the
-            </span>
-            <span className="block text-sm font-semibold leading-tight">
-              App Store
-            </span>
-          </span>
-        </a>
-        <a
-          href="#"
-          className="flex w-full items-center justify-center gap-2 rounded-xl bg-gray-900 px-5 py-3 text-white shadow-sm transition hover:bg-gray-800 sm:w-auto"
-        >
-          <span className="text-left">
             <span className="block text-[10px] leading-none">GET IT ON</span>
             <span className="block text-sm font-semibold leading-tight">
               Google Play
