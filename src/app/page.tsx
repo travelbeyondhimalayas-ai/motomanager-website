@@ -1,55 +1,67 @@
 import Link from "next/link";
+import {
+  ClipboardList,
+  IdCard,
+  FileText,
+  RefreshCw,
+  Bike,
+  Wrench,
+  Users,
+  QrCode,
+  CloudCog,
+  ShieldCheck,
+} from "lucide-react";
 
 const features = [
   {
     title: "Rentals at a glance",
     desc: "Track active and past rentals — vehicle, customer, dates, charges, and security deposit — all in one list.",
-    icon: "📋",
+    icon: ClipboardList,
   },
   {
     title: "ID & licence capture",
     desc: "Snap photos of customer ID proof (front/back), driving licence, and capture a digital signature on handover.",
-    icon: "🪪",
+    icon: IdCard,
   },
   {
     title: "Auto-generated PDF receipts",
     desc: "Professional rental receipts with photos, signatures, and full terms & conditions — damage charges, late fees, traffic violation liability, generated instantly.",
-    icon: "🧾",
+    icon: FileText,
   },
   {
     title: "Edit & extend rentals",
     desc: "Extend a rental or update charges and the receipt regenerates automatically — no manual rework.",
-    icon: "🔁",
+    icon: RefreshCw,
   },
   {
     title: "Fleet, agents & blacklist",
     desc: "Manage your full vehicle fleet, your booking agents, and keep a blacklist of problem customers.",
-    icon: "🏍️",
+    icon: Bike,
   },
   {
     title: "Maintenance & expenses",
     desc: "Log servicing, repairs, and other expenses per vehicle to track real profitability.",
-    icon: "🔧",
+    icon: Wrench,
   },
   {
     title: "Owner & staff logins",
     desc: "Role-based access for multiple staff members, with the owner keeping full control.",
-    icon: "👥",
+    icon: Users,
   },
   {
     title: "QR codes for reviews & UPI",
     desc: "Print or display QR codes for Google Reviews and UPI payments at your counter.",
-    icon: "🔳",
+    icon: QrCode,
   },
   {
     title: "Real-time cloud sync",
     desc: "Built on Supabase — every staff phone stays in sync, in real time, across devices.",
-    icon: "☁️",
+    icon: CloudCog,
   },
   {
     title: "DPDP Act 2023 compliant",
     desc: "Itemized data consent notices and secure private storage for customer ID documents, in line with India's Digital Personal Data Protection Act.",
-    icon: "🔒",
+    icon: ShieldCheck,
   },
 ];
 
@@ -136,7 +148,9 @@ export default function Home() {
               key={f.title}
               className="rounded-2xl border border-brand-100 bg-white p-6 shadow-sm transition hover:shadow-md"
             >
-              <div className="text-3xl">{f.icon}</div>
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-100 text-brand-600">
+                <f.icon className="h-5 w-5" />
+              </div>
               <h3 className="mt-3 font-semibold">{f.title}</h3>
               <p className="mt-2 text-sm text-gray-600">{f.desc}</p>
             </div>
