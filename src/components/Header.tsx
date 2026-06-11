@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -15,9 +16,15 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-brand-100 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <Link href="/" className="flex items-center gap-2 text-lg font-bold text-brand-600">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand text-white">
-            M
+        <Link href="/" className="flex items-center gap-2 text-lg font-bold text-brand-900">
+          <span className="relative block h-9 w-9 overflow-hidden rounded-lg">
+            <Image
+              src="/logo.png"
+              alt="MotoManager"
+              fill
+              className="object-cover"
+              style={{ transform: "scale(1.7)", transformOrigin: "top center" }}
+            />
           </span>
           MotoManager
         </Link>

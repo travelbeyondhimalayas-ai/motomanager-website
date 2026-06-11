@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -6,9 +7,15 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
           <div>
-            <div className="flex items-center gap-2 text-lg font-bold text-brand-600">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand text-white">
-                M
+            <div className="flex items-center gap-2 text-lg font-bold text-brand-900">
+              <span className="relative block h-9 w-9 overflow-hidden rounded-lg">
+                <Image
+                  src="/logo.png"
+                  alt="MotoManager"
+                  fill
+                  className="object-cover"
+                  style={{ transform: "scale(1.7)", transformOrigin: "top center" }}
+                />
               </span>
               MotoManager
             </div>
