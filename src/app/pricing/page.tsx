@@ -5,7 +5,7 @@ import Link from "next/link";
 const plans = [
   {
     name: "Free Trial",
-    vehicles: "Up to 30 vehicles",
+    vehicles: "Up to 10 vehicles",
     staff: "1 owner account only",
     monthly: 0,
     introMonthly: 0,
