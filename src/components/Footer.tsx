@@ -45,10 +45,20 @@ export default function Footer() {
             <h4 className="text-sm font-semibold text-gray-900">Get the app</h4>
             <ul className="mt-3 space-y-2 text-sm text-gray-600">
               <li>
-                <a href="#" className="hover:text-brand">App Store (coming soon)</a>
-              </li>
-              <li>
                 <a href="#" className="hover:text-brand">Google Play (coming soon)</a>
+              </li>
+            </ul>
+            <h4 className="mt-6 text-sm font-semibold text-gray-900">Contact</h4>
+            <ul className="mt-3 space-y-2 text-sm text-gray-600">
+              <li>
+                <a
+                  href="https://wa.me/918979200363"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-brand"
+                >
+                  WhatsApp: +91 89792 00363
+                </a>
               </li>
             </ul>
           </div>

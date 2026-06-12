@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy — MotoManager",
+  description:
+    "How MotoManager collects, stores, and protects personal data, in line with India's DPDP Act 2023.",
+};
+
 export default function PrivacyPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 prose prose-headings:font-bold prose-a:text-brand">

@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Get Started — MotoManager",
+  description:
+    "Download MotoManager, create your shop account, pick a plan, and start managing rentals in minutes.",
+};
+
 const steps = [
   {
     title: "Download MotoManager",
-    desc: "Get the app from the App Store or Google Play (links coming soon).",
+    desc: "Get the app from Google Play (link coming soon).",
   },
   {
     title: "Create your shop account",
@@ -61,7 +69,7 @@ export default function GetStartedPage() {
         </a>
       </div>
       <p className="mt-3 text-center text-xs text-gray-400">
-        App Store / Play Store links coming soon
+        Play Store link coming soon
       </p>
     </div>
   );

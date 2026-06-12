@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Pricing — MotoManager",
+  description:
+    "Simple INR pricing for bike & scooter rental shops. Free 1-week trial, plans from ₹99/month with 50% intro discount.",
+};
 
 // TODO: finalize pricing — these are placeholder amounts (in INR).
 // Annual price = monthly x 10 (≈17% off, "2 months free").
@@ -90,6 +97,37 @@ const plans = [
   },
 ];
 
+const faqs = [
+  {
+    q: "Can I switch plans later?",
+    a: "Yes. You can upgrade or downgrade anytime from inside the app. Upgrades apply immediately; downgrades take effect from your next billing cycle.",
+  },
+  {
+    q: "What happens when my free trial ends?",
+    a: "Your data stays safe. You'll be asked to pick a paid plan to continue — nothing is deleted, and you can pick up exactly where you left off.",
+  },
+  {
+    q: "What happens to my data if I cancel?",
+    a: "Your records remain stored securely for a grace period so you can re-subscribe and continue, or request an export. After the grace period, data is deleted in line with our Privacy Policy.",
+  },
+  {
+    q: "How do payments work?",
+    a: "Subscriptions are billed through Razorpay inside the app — pay via UPI autopay, debit/credit card, or netbanking. You can cancel anytime; access continues until the end of the paid period.",
+  },
+  {
+    q: "Does it work on multiple phones?",
+    a: "Yes. Your shop's data syncs in real time across all owner and staff devices via secure cloud sync.",
+  },
+  {
+    q: "Is my customers' ID data safe?",
+    a: "Yes. ID documents and signatures are stored in private, access-controlled cloud storage, encrypted in transit, and handled in line with India's DPDP Act 2023 with itemized consent.",
+  },
+  {
+    q: "What if I have more than 200 vehicles?",
+    a: "Get in touch with us — we'll set up a custom plan for larger operations.",
+  },
+];
+
 function formatINR(n: number) {
   return `₹${n.toLocaleString("en-IN")}`;
 }
@@ -104,9 +142,6 @@ export default function PricingPage() {
         <p className="mt-3 text-gray-600">
           Pick the plan that matches your fleet size. Billed monthly or
           annually. Cancel anytime from inside the app.
-        </p>
-        <p className="mt-1 text-xs text-amber-600">
-          Pricing shown below is placeholder — final amounts to be confirmed.
         </p>
         <div className="mt-4 inline-block rounded-full bg-brand text-white px-4 py-1.5 text-sm font-semibold">
           🎉 Limited-time intro offer: 50% off for early adopters
@@ -196,6 +231,28 @@ export default function PricingPage() {
             </div>
           );
         })}
+      </div>
+
+      <div className="mx-auto mt-16 max-w-3xl">
+        <h2 className="text-center text-2xl font-bold">
+          Frequently asked questions
+        </h2>
+        <div className="mt-8 space-y-4">
+          {faqs.map((faq) => (
+            <details
+              key={faq.q}
+              className="group rounded-2xl border border-brand-100 bg-white p-5 shadow-sm"
+            >
+              <summary className="flex cursor-pointer items-center justify-between font-semibold text-gray-900 marker:content-none [&::-webkit-details-marker]:hidden">
+                {faq.q}
+                <span className="ml-4 text-brand transition group-open:rotate-45">
+                  +
+                </span>
+              </summary>
+              <p className="mt-3 text-sm text-gray-600">{faq.a}</p>
+            </details>
+          ))}
+        </div>
       </div>
 
       <div className="mx-auto mt-12 max-w-2xl rounded-2xl border border-brand-100 bg-brand-50/40 p-6 text-center text-sm text-gray-600">

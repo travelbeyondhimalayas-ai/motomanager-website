@@ -102,7 +102,7 @@ export default function Home() {
               </a>
             </div>
             <p className="mt-3 text-xs text-gray-400">
-              App Store / Play Store links coming soon
+              Play Store link coming soon
             </p>
           </div>
 
@@ -165,6 +165,39 @@ export default function Home() {
                 </div>
               )
             )}
+          </div>
+        </div>
+      </section>
+
+      {/* Founder story */}
+      <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
+        <div className="rounded-3xl border border-brand-100 bg-white p-8 shadow-sm sm:p-10">
+          <span className="inline-block rounded-full bg-brand-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-600">
+            Why MotoManager exists
+          </span>
+          <h2 className="mt-4 text-2xl font-bold sm:text-3xl">
+            Built by a rental shop owner, not a software company
+          </h2>
+          <div className="mt-4 space-y-4 text-gray-600">
+            <p>
+              MotoManager started behind the counter of a real bike rental
+              shop in Rishikesh. Every busy season meant the same headaches:
+              paper registers that got lost, customer ID photos buried in
+              WhatsApp chats, hand-written receipts that nobody could read
+              when a dispute came up, and no way to know which bike was due
+              back when.
+            </p>
+            <p>
+              So we built the tool we wished existed — an app simple enough
+              to use at a crowded counter during peak season, but complete
+              enough to run the whole business: receipts with photos and
+              signatures, fleet tracking, staff logins, and customer records
+              that hold up when it matters.
+            </p>
+            <p className="font-medium text-gray-900">
+              Today it runs our own shops in Rishikesh and Dehradun every
+              single day. Now it can run yours.
+            </p>
           </div>
         </div>
       </section>
